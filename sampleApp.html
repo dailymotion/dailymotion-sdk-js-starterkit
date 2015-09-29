@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sample dailymotion app</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1> Sample dailymotion app </h1>
+    
+    <div id="list-choice">
+      <label> <button class="choose-list" id="list-last" disabled onclick="listVideos('last')">List last videos</button></label>
+      <label> <button class="choose-list" id="list-featured" disabled onclick="listVideos('featured')">List featured videos</button></label>
+      <label> <button class="choose-list" id="list-trending" disabled onclick="listVideos('trending')">List trending videos</button></label>
+    </div>
+
+    <div id="videos-list">
+      <h2></h2>
+    </div>
+
+    <script type="text/javascript" src="sampleApp.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+      window.dmAsyncInit = function()
+      {
+          DM.init();
+          initApp();
+      };
+      (function() {
+          var e = document.createElement('script'); e.async = true;
+          e.src = document.location.protocol + '//api.dmcdn.net/all.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+      }());
+    </script>
+  </body>
+</html>

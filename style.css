@@ -1,0 +1,48 @@
+body {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family:Hind;
+    text-align: center;
+}
+
+h2 {
+	margin-top:50px;
+	color: #0066DC;
+	text-transform: uppercase;
+}
+
+.video-item {
+	margin:10px ;	
+	display: inline-block ;
+	width:280px;
+	height:166px;
+	background-color:#F1EEEE;
+	text-align:center;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+.title {
+	font-size:18px;
+	display: table-cell;
+	vertical-align: top;
+	padding:10px;
+	padding-top:0px;
+}
+
+img {
+	padding:10px;
+	padding-bottom:0px;
+}
+
+.video-item:hover {
+	background-color:#7FB1ED;
+	color:white;
+}
+
+h1 {
+	color:white;
+	font:bold 36px;
+	padding:20px;	
+	background-color: #0066DC;
+}
