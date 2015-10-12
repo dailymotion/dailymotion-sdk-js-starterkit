@@ -5,13 +5,18 @@ var config = {
   live: {text:"Live streams", params:{flags:"live_onair",fields:"id,title,thumbnail_120_url,url",limit: 20}},
 }
 
-function initApp() {
-  $('.choose-list').attr('disabled', false);
-}
 
-// List videos
+window.dmAsyncInit = function()
+{
+    DM.init();
+    $('.choose-list').attr('disabled', false);
+};
+
+
 function listVideos(listType) {
-  $('.video-item').remove();
+  var video_items= $('.video-item') ;
+
+  video_items.remove();
   $('h2').text(config[listType].text);
   DM.api('/videos', 
     config[listType].params, 
@@ -20,7 +25,7 @@ function listVideos(listType) {
         displayVideo(video);
       });  
 
-      $( ".video-item" ).click(function() {
+      video_items.click(function() {
         var player = DM.player(this, {
           video: $(this).attr("data-video"),
           params: {autoplay:true}}
@@ -52,3 +57,4 @@ function displayVideo(videoItem) {
  
   $('#videos-list').append(videoDiv);
 }
+
