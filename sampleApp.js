@@ -11,6 +11,7 @@
   {
       DM.init();
       $('.choose-list').attr('disabled', false);
+      var player = DM.player(document.getElementById('player'),{});
   };
 
   function listVideos() {
@@ -26,10 +27,7 @@
         });
 
         $('.video-item').click(function() {
-          var player = DM.player(this, {
-            video: $(this).attr("data-video"),
-            params: {autoplay:true}}
-          );
+      player.load($(this).attr("data-video"));
         });
     });
   }
