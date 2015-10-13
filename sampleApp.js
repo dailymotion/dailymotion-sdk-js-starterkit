@@ -15,9 +15,8 @@
 
   function listVideos() {
     var listType = $(this).data('list-type');
-    var video_items= $('.video-item') ;
 
-    video_items.remove();
+    $('.video-item').remove();
     $('h2').text(config[listType].text);
     DM.api('/videos',
       config[listType].params,
@@ -26,7 +25,7 @@
           displayVideo(video);
         });
 
-        video_items.click(function() {
+        $('.video-item').click(function() {
           var player = DM.player(this, {
             video: $(this).attr("data-video"),
             params: {autoplay:true}}
