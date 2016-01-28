@@ -9,9 +9,9 @@
 
   window.dmAsyncInit = function()
   {
-      DM.init();
-      $('.choose-list').attr('disabled', false);
-      var player = DM.player(document.getElementById('player'),{});
+    DM.init();
+    $('.choose-list').attr('disabled', false);
+    var player = DM.player(document.getElementById('player'),{});
   };
 
   function listVideos() {
@@ -27,7 +27,7 @@
         });
 
         $('.video-item').click(function() {
-      player.load($(this).attr("data-video"));
+          player.load($(this).attr("data-video"));
         });
     });
   }
