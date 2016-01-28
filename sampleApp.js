@@ -54,6 +54,6 @@
     $('#videos-list').append(videoDiv);
   }
 
-  $('#list-choice').on('click', 'button', listVideos )
+  $('#list-choice').on('click', 'button', listVideos );
 
 })();
