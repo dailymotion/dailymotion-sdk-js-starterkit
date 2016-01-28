@@ -1,6 +1,5 @@
-# sampleApp
-sample js app for dailymotion 
-
+# Sample dailymotion application - playing with Dailymotion JavaScript SDK
+This is a sample js app, that performs a simple dailymotion videos listing and display.
 
 
 ## Setup instructions
