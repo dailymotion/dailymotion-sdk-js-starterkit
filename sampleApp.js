@@ -1,10 +1,22 @@
 (function() {
 
   var config = {
-    featured: {text:"Featured videos", params:{flags:"featured",fields:"id,title,thumbnail_120_url,url",limit: 20}},
-    last: {text:"Last videos", params:{fields:"id,title,thumbnail_120_url,url",limit: 20}},
-    trending: {text:"Trending videos", params:{sort:"trending",fields:"id,title,thumbnail_120_url,url",limit: 20}},
-    live: {text:"Live streams", params:{flags:"live_onair",fields:"id,title,thumbnail_120_url,url",limit: 20}},
+    featured: {
+      text:"Featured videos",
+      params:{flags:"featured",fields:"id,title,thumbnail_120_url,url",limit: 20}
+    },
+    last: {
+      text:"Last videos",
+      params:{fields:"id,title,thumbnail_120_url,url",limit: 20}
+    },
+    trending: {
+      text:"Trending videos",
+      params:{sort:"trending",fields:"id,title,thumbnail_120_url,url",limit: 20}
+    },
+    live: {
+      text:"Live streams",
+      params:{flags:"live_onair",fields:"id,title,thumbnail_120_url,url",limit: 20}
+    },
   }
 
   window.dmAsyncInit = function()
